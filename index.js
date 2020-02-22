@@ -9,6 +9,14 @@ class Formatter {
   }
 
   static titleize(string) {
-    const nonCapWords = ["the", "a", "an", "but", "of", "and", "for", "at", "by", "from"];
+    const exemptWords = ["the", "a", "an", "but", "of", "and", "for", "at", "by", "from"];
+
+    let newString = string.split(' ').map(word => {
+      if (exemptWords.includes(word) && word != string[0]) {
+        return word;
+      } else {
+        return word[0].toUpperCase() + word.slice(1)
+      }
+    })
   }
 }
