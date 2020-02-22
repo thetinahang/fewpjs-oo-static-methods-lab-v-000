@@ -9,6 +9,6 @@ class Formatter {
   }
 
   static titleize(string) {
-
+    const nonCapWords = ["the", "a", "an", "but", "of", "and", "for", "at", "by", "from"];
   }
 }
